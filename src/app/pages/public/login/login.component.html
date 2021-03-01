@@ -1,0 +1,32 @@
+<mat-card class="example-card m0-15 d-flex mt-5">
+  <div class="d-flex flex-column w-65 justify-content-center">
+    <h4 class="text-primary text-center">Create Account</h4>
+    <div class="d-flex justify-content-center pl-5 pr-5 mb-5">
+      <mat-icon svgIcon="login-fb" class="icon-display" (click)="signInWithFB()"></mat-icon>
+      <mat-icon svgIcon="login-gg" class="icon-display" (click)="signInWithGoogle()"></mat-icon>
+      <mat-icon svgIcon="login-tw" class="icon-display"></mat-icon>
+    </div>
+    <div class="authen-controls justify-content-center d-flex flex-column pl-5 pr-5">
+      <mat-form-field appearance="outline" floatLabel="never">
+        <mat-label>Name</mat-label>
+        <input matInput/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput/>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput/>
+      </mat-form-field>
+      <div class="d-flex justify-content-center">
+        <button mat-button mat-flat-button color="accent" class="mr-4">Sign Up</button>
+        <button mat-button mat-stroked-button color="primary">Sign In</button>
+      </div>
+    </div>
+  </div>
+  <div class="banner w-35">
+    <img src="assets/images/photo_2021-02-22_16-53-10.jpg" class="login-banner-img w-100" style="filter: blur(5px)"/>
+  </div>
+</mat-card>
+
