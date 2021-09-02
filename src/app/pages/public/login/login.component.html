@@ -9,7 +9,7 @@
     <div class="authen-controls justify-content-center d-flex flex-column pl-5 pr-5">
       <mat-form-field appearance="outline" floatLabel="never">
         <mat-label>Name</mat-label>
-        <input matInput/>
+        <input (input)="setValue($event)" matInput/>
       </mat-form-field>
       <mat-form-field appearance="outline">
         <mat-label>Email</mat-label>
@@ -20,7 +20,7 @@
         <input matInput/>
       </mat-form-field>
       <div class="d-flex justify-content-center">
-        <button mat-button mat-flat-button color="accent" class="mr-4">Sign Up</button>
+        <button (click)="_connect()" mat-button mat-flat-button color="accent" class="mr-4">Sign Up</button>
         <button mat-button mat-stroked-button color="primary">Sign In</button>
       </div>
     </div>
