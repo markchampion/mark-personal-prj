@@ -7,9 +7,10 @@ import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material/material.module';
 import {PagesModule} from './pages/pages.module';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule} from 'angularx-social-login';
 import {environment} from '../environments/environment';
+import {ErrorInterceptor} from './helpers/error.interceptor';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,10 @@ import {environment} from '../environments/environment';
           }
         ]
       } as SocialAuthServiceConfig,
+    }, {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptor,
+      multi: true,
     }
   ],
   bootstrap: [
@@ -49,4 +54,5 @@ import {environment} from '../environments/environment';
 
   ]
 })
-export class AppModule { }
+export class AppModule {
+}
