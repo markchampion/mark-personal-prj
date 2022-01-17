@@ -25,6 +25,8 @@
     "@types/socket.io": "^3.0.2",
     "angularx-social-login": "^3.5.4",
     "bootstrap": "^4.6.0",
+    "ngx-facebook": "^3.0.0-0",
+    "ngx-sharebuttons": "^10.0.0",
     "rxjs": "~6.6.0",
     "sockjs-client": "^1.5.1",
     "stompjs": "^2.3.3",

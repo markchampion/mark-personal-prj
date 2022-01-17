@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
     iconRegistry.addSvgIcon('login-fb', sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/icons/icons8-facebook.svg'));
     iconRegistry.addSvgIcon('login-gg', sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/icons/icons8-google-150.svg'));
     iconRegistry.addSvgIcon('login-tw', sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/icons/icons8-twitter.svg'));
-
   }
 
   username: string;

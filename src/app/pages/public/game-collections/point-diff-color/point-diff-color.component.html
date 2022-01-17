@@ -1,0 +1,15 @@
+<div id="container" class="container w-100 h-100 d-flex justify-content-center p-5">
+  <div id="game-board" class="game-board m-auto">
+    <div *ngFor="let i of [].constructor(itemBox.totalBox); let index = index"
+         class="item-box"
+         (click)="moveOnOrNot(index)"
+         [style]="{
+          'width': getWidth(itemBox.scaleLevel),
+          'height': getWidth(itemBox.scaleLevel)}"
+    >
+      <div id="box-heart" class="w-100 h-100"
+           [style]="{'background-color': index === randomDif ? itemBox.standOutColor : itemBox.color}"></div>
+    </div>
+  </div>
+</div>
+<fb-share href="https://youtube.com"></fb-share>

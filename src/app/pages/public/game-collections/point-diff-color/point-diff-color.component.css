@@ -1,0 +1,31 @@
+.item-box-w1 {
+  width: 50%;
+  height: 50%;
+}
+.item-box {
+  float: left;
+  padding: 2px;
+  border-radius: 10px;
+}
+.item-box:hover{
+  cursor: pointer;
+}
+
+@media (min-width: 360px) {
+  .game-board {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+/*//Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  .game-board {
+    width: 500px;
+    height: 500px;
+  }
+}

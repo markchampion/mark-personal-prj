@@ -6,11 +6,17 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing.module';
 import {MaterialModule} from './material/material.module';
-import {PagesModule} from './pages/pages.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import {FacebookLoginProvider, GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule} from 'angularx-social-login';
+import {
+  FacebookLoginProvider,
+  GoogleLoginProvider,
+  SocialAuthServiceConfig,
+  SocialLoginModule
+} from 'angularx-social-login';
 import {environment} from '../environments/environment';
 import {ErrorInterceptor} from './helpers/error.interceptor';
+import {FacebookModule, FacebookService} from 'ngx-facebook';
+import {PublicModule} from './pages/public/public.module';
 
 @NgModule({
   declarations: [
@@ -24,6 +30,7 @@ import {ErrorInterceptor} from './helpers/error.interceptor';
     HttpClientModule,
     MaterialModule,
     SocialLoginModule,
+    FacebookModule
   ],
   providers: [
     {
